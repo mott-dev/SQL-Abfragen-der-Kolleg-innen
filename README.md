@@ -1,5 +1,7 @@
 # SQL-Abfragen-der-Kolleg-innen
 
+![alt text](./db_schema.png "DB Schema image")
+
 ## 1:
 SELECT Categories.CategoryID, Categories.CategoryName, OrderDetails.ProductID, Products.ProductName, Orders.OrderID, Orders.OrderDate FROM Orders INNER JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID INNER JOIN Products ON Products.ProductID = OrderDetails.ProductID INNER JOIN Categories ON Categories.CategoryID = Products.CategoryID ORDER BY Categories.CategoryID ASC, Orders.OrderDate DESC
 
