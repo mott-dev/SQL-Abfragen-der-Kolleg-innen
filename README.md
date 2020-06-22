@@ -4,6 +4,7 @@
 [https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
 
 
+
 ## Aufgaben
 ### 1:
 Selektieren Sie: CategoryID, CategoryName, ProductID, ProductName, OrderID, OrderDate der Tabellen Categories, OrderDetails und Orders, wenn ProductID größer als 2 und CategoryID kleiner als 8, sortiert nach CategoryID aufsteigend, dann nach OrderDate absteigend
@@ -36,6 +37,7 @@ Alle Orders und die zugehörigen OrderDetails, wobei nur die Order mit der höch
 
 ### 15:
 Selektieren Sie ausschließlich den letzten Datensatz (größtest „OrderDate“) der Tabelle „Orders“.
+
 
 
 ## Lösungen
