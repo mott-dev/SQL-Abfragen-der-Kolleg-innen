@@ -2,7 +2,8 @@
 
 ## SQL W3Schools Übungsaufgaben
 [https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all](https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all)
-
+## ERP Schema
+![ERP Schema](https://raw.githubusercontent.com/mott-dev/SQL-Abfragen-der-Kolleg-innen/master/db_schema.PNG "W3schools DB Schema")
 
 
 ## Aufgaben
