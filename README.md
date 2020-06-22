@@ -8,6 +8,9 @@
 ### 1:
 SELECT Categories.CategoryID, Categories.CategoryName, OrderDetails.ProductID, Products.ProductName, Orders.OrderID, Orders.OrderDate FROM Orders INNER JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID INNER JOIN Products ON Products.ProductID = OrderDetails.ProductID INNER JOIN Categories ON Categories.CategoryID = Products.CategoryID ORDER BY Categories.CategoryID ASC, Orders.OrderDate DESC
 
+### 2:
+SELECT * FROM Suppliers, OrderDetails, Orders, Products WHERE Orderdetails.OrderID = Orders.OrderID AND OrderDetails.ProductID = Products.ProductID AND Products.SupplierID = Suppliers.SupplierID AND Orders.OrderDate BETWEEN '1996-04-07' AND '1996-12-05' AND Orders.CustomerID = 8
+
 ### 7:
 SELECT * FROM Customers,Orders,OrderDetails where Customers.CustomerID= Orders.CustomerID and Orders.OrderID=OrderDetails.OrderID and Quantity>50 order by Quantity desc
 
