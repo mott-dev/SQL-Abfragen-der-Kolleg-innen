@@ -48,6 +48,18 @@ SELECT Categories.CategoryID, Categories.CategoryName, OrderDetails.ProductID, P
 ### 2:
 SELECT * FROM Suppliers, OrderDetails, Orders, Products WHERE Orderdetails.OrderID = Orders.OrderID AND OrderDetails.ProductID = Products.ProductID AND Products.SupplierID = Suppliers.SupplierID AND Orders.OrderDate BETWEEN '1996-04-07' AND '1996-12-05' AND Orders.CustomerID = 8
 
+### 3:
+SELECT * FROM Products p, Suppliers s WHERE s.SupplierID = p.SupplierID AND p.ProductName like 'Chef%' ORDER BY s.Country
+
+### 4:
+SELECT * FROM Products p, Orders o, OrderDetails od, Customers c WHERE p.ProductID = od.ProductID AND od.OrderID = o.OrderID AND o.CustomerID = c.CustomerID AND p.ProductName = "Gustaf's Knäckebröd" AND o.OrderDate BETWEEN '1996-12-12' AND '1997-11-02'
+
+### 5:
+SELECT * FROM Products p INNER JOIN Suppliers s ON p.SupplierID = s.SupplierID WHERE p.Price < 5
+
+### 6:
+- zu umfangreich -
+
 ### 7:
 SELECT * FROM Customers,Orders,OrderDetails where Customers.CustomerID= Orders.CustomerID and Orders.OrderID=OrderDetails.OrderID and Quantity>50 order by Quantity desc
 
@@ -59,6 +71,9 @@ SELECT FirstName AS Vorname, COUNT(Orders.OrderID) AS AnzahlBestellungen FROM Em
 
 ### 10:
 SELECT Distinct o.OrderID, Sum(p.price * oD.quantity)  from Orders o, OrderDetails oD, Products p where oD.OrderID = o.OrderID AND p.ProductID = oD.ProductID Group by o.OrderID Having Sum(p.price * oD.quantity) > 2000
+
+### 11:
+SELECT * FROM Suppliers, OrderDetails, Orders, Products WHERE Orderdetails.OrderID = Orders.OrderID AND OrderDetails.ProductID = Products.ProductID AND Products.SupplierID = Suppliers.SupplierID AND Suppliers.SupplierID between 5 AND 10 ORDER BY Orders.CustomerID, Products.ProductName
 
 ### 12:
 SELECT Products.ProductID, Products.ProductName, Suppliers.SupplierID, Suppliers.SupplierName, Suppliers.ContactName FROM Products INNER JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID WHERE (Suppliers.SupplierName > 'A%' AND Suppliers.SupplierName < 'F%') AND (Suppliers.ContactName = "Charlotte Cooper" OR Suppliers.ContactName = "Cheryl Saylor") ORDER BY ProductName ASC;
